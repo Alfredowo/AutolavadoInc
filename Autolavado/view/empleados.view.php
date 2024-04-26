@@ -12,5 +12,13 @@
                 <td>Contraseña</td>
             </tr>
         </thead>
+        <tbody>
+            <?php foreach ($resultado as $res) {?>
+                <tr>
+                    <td><?php echo $res['nombre'] ?></td>
+                    <td><?php echo $res['pass'] ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
     </table>
 </div>
