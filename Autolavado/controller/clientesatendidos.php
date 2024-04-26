@@ -3,10 +3,9 @@
     require 'config.php';
     require 'libreria/cobros.php';
 
-    // Crear una instancia de la clase Cobros
     $cobros = new Cobros();
 
-    // Llamar al método Mostrar() en la instancia $cobros
+    //mostrar
     $p['resultado'] = $cobros->Mostrar('%');
 
     ViewA('clientesatendidos', $p);

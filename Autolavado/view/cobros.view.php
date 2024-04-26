@@ -1,12 +1,9 @@
 <main>
     <h1>Registro Clientes Antendidos</h1>
-    <form action="">
+    <form action="cobros" method="post">
         <fieldset>
-            <label for="empleado">Empleado</label>
-            <input type="text" placeholder="Jusepe" id="empleado">
-
             <label for="cliente">Cliente</label>
-            <input type="text" placeholder="Nombre Cliente" id="cliente">
+            <input type="text" placeholder="Nombre Cliente" id="cliente" name="txtCliente">
 
             <label for="vehiculos">Tipo de Vehiculo</label>
             <select id="vehiculos">
@@ -17,11 +14,11 @@
             </select>
 
             <label for="cantidad">Cantidad</label>
-            <input type="number" placeholder="Cantidad" id="cantidad" min="0">
+            <input type="number" placeholder="Cantidad" id="cantidad" min="0" name="txtCantidad">
 
             <label for="fecha">Fecha</label>
-            <input type="date" id="fecha">
+            <input type="datetime-local" id="fecha" name="txtFecha">
         </fieldset>
-        <input type="submit" value="Aceptar">
+        <button type="submit">Aceptar</button>
     </form>
 </main>
