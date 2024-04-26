@@ -8,20 +8,22 @@
     <table>
         <thead>
             <tr>
-                <td>Empleado</td>
                 <td>Fecha</td>
+                <td>Empleado</td>
                 <td>Autos Lavados</td>
                 <td>Dinero Generado</td>
             </tr>
         </thead>
 
         <tbody>
-            <tr>
-                <td>Jusepe</td>
-                <td>20/04/2024</td>
-                <td>2</td>
-                <td>60</td>
-            </tr>
+            <?php foreach ($resultado as $res) {?>
+                <tr>
+                    <td><?php echo $res['fecha'] ?></td>
+                    <td><?php echo $res['nombre'] ?></td>
+                    <td><?php echo $res['autosLavados'] ?></td>
+                    <td><?php echo $res['total'] ?></td>
+                </tr>
+            <?php }?>
         </tbody>
     </table>
 </div>
