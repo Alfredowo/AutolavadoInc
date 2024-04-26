@@ -1,8 +1,7 @@
 <h1>Reporte de Clientes Atendidos</h1>
 
 <div>
-    <!-- Boton para agregar un nuevo  -->
-    <form action="imprimir" method="GET">
+    <form action="imprimir" method="get">
         <input type="submit" value="Imprimir">
     </form>
 
@@ -21,15 +20,17 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>Mario</td>
-                <td>1</td>
-                <td>Jusepe</td>
-                <td>auto</td>
-                <td>2</td>
-                <td>20/04/2024</td>
-                <td>30</td>
-            </tr>
+            <?php foreach ($resultado as $res) {?>
+                <tr>
+                    <td><?php echo $res['turno'] ?></td>
+                    <td><?php echo $res['cliente'] ?></td>
+                    <td><?php echo $res['atendio'] ?></td>
+                    <td><?php echo $res['vehiculo'] ?></td>
+                    <td><?php echo $res['cantidad'] ?></td>
+                    <td><?php echo $res['fecha'] ?></td>
+                    <td><?php echo $res['total'] ?></td>
+                </tr>
+            <?php }?>
         </tbody>
     </table>
 </div>

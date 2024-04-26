@@ -3,6 +3,7 @@
 <head>
   <title>Autolavado</title>
   <meta charset="utf=8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
 </head>
 <body>
   <div>
@@ -15,5 +16,6 @@
     </nav>
   </div>
   <div><?php echo $view_content; ?></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
 </body>
 </html>

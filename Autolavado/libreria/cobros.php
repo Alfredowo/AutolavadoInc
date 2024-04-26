@@ -1,13 +1,13 @@
 <?php
-    class Vehiculos
+    class Cobros
     {
-        function Insertar($nombre,$tc,$costo)
+        function Insertar($cliente, $empleado, $vehiculo, $cantidad, $fecha, $total)
         {
             $con = new mysqli(s,u,p,bd);
             $con->set_charset("utf8");
             $q = $con->stmt_init();
-            $q->prepare("insert into vehiculos values(null,?,?,?)");
-            $q->bind_param('ssd',$nombre,$tc,$costo);
+            $q->prepare("insert into cobros values(null,?,?,?,?,?,?)");
+            $q->bind_param('ssd', $cliente, $empleado, $vehiculo, $cantidad, $fecha, $total);
             $q->execute();
             $q->close();
         }
@@ -16,7 +16,7 @@
             $con = new mysqli(s,u,p,bd);
             $con->set_charset("utf8");
             $q = $con->stmt_init();
-            $q->prepare("delete from vehiculos where id=?");
+            $q->prepare("delete from cobros where id=?");
             $q->bind_param('i',$id);
             $q->execute();
             $q->close();
@@ -26,32 +26,23 @@
             $con = new mysqli(s,u,p,bd);
             $con->set_charset("utf8");
             $q = $con->stmt_init();
-            $q->prepare('select * from vehiculos where nombre like ?');
+            $q->prepare('select * from vista_clientes_atendidos where turno like ?');
             $q->bind_param('s',$fill);
             $q->execute();
             $rs = $q->get_result();
-            // $q->bind_result($id,$nombre, $tc, $costo);
-            // $rs = array();
-            // while ($q->fetch())
-            // {
-                // $rs[] = array(
-                //     'nombre' => $nombre,
-                //     'tc' => $tc,
-                //     'costo' => $costo
-                // );
-            //}
             $q->close();
             return $rs;
         }
+        /*
         public function Editar($id, $nombre, $tc, $cobro)
         {
             $con = new mysqli(s,u,p,bd);
             $con->set_charset("utf8");
             $q = $con->stmt_init();
-            $q->prepare("update vehiculos set nombre=?, tipocobro=?, cobro=? where id=?");
+            $q->prepare("update cobros set cliente=?, tipocobro=?, cobro=? where id=?");
             $q->bind_param('ssd', $nombre, $tc, $cobro, $id);
             $q->execute();
             $q->close();
-        }
+        }*/
     }
 ?>
