@@ -1,9 +1,5 @@
 <h1>Vehiculos</h1>
 <div>
-    <form action="addvehiculos" method="get">
-        <input type="submit" value="Nuevo">
-    </form>
-
     <table>
         <thead>
             <tr>
