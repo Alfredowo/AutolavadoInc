@@ -8,7 +8,7 @@
             $q = $con->stmt_init();
             $q->prepare("insert into cobros values(null,?,?,?,?,STR_TO_DATE(?, '%Y-%m-%d %H:%i:%s'),?)");
             $fechapro = date('Y-m-d H:i:s', strtotime($fecha));
-            $q->bind_param('ssd', $cliente, $fkempleado, $fkvehiculo, $cantidad, $fechapro, $total);
+            $q->bind_param('ssssss', $cliente, $fkempleado, $fkvehiculo, $cantidad, $fechapro, $total);
             $q->execute();
             $q->close();
         }

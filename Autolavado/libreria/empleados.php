@@ -7,7 +7,7 @@
             $con->set_charset("utf8");
             $q = $con->stmt_init();
             $q->prepare("insert into usuarios values(null,?,?,'Empleado')");
-            $q->bind_param('ssd', $nombre, $pass);
+            $q->bind_param('ss', $nombre, $pass);
             $q->execute();
             $q->close();
         }

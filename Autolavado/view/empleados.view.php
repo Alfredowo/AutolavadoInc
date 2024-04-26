@@ -1,6 +1,6 @@
 <h1>Empleados</h1>
 <div>
-    <form action="addepleados" method="GET">
+    <form action="addempleado" method="GET">
         <input type="submit" value="Nuevo">
     </form>
 

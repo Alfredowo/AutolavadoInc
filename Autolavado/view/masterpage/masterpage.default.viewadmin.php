@@ -10,7 +10,7 @@
     <nav>
       <a href="vehiculos">Vehiculos</a>
       <a href="pagarempleados">Pagar a empleados</a>
-      <a href="empleados">Registrar Empleados</a>
+      <a href="empleados">Empleados</a>
       <a href="">Informes</a>
       <a href="home">Cerrar Sesion</a>
     </nav>
