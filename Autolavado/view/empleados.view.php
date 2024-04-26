@@ -8,8 +8,8 @@
         <thead>
             <tr>
                 <td>Nombre</td>
-                <td>Usuario</td>
                 <td>Contraseña</td>
+                <td>Permisos</td>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +17,7 @@
                 <tr>
                     <td><?php echo $res['nombre'] ?></td>
                     <td><?php echo $res['pass'] ?></td>
+                    <td><?php echo $res['permisos'] ?></td>
                 </tr>
             <?php } ?>
         </tbody>

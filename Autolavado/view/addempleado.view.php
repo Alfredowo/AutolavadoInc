@@ -6,18 +6,13 @@
                 <form action="empleados" method="post">
 
                     <div class="">
-                        <input type="text" name="nombre" id="nombre" required>
                         <label for="nombre">Nombre</label>
-                    </div>
-
-                    <div class="">
-                        <input type="text" name="username" id="username" required>
-                        <label for="username">Usuario</label>
+                        <input type="text" name="txtNombre" id="nombre" required>
                     </div>
         
                     <div class="">
-                        <input type="password" name="password" id="password" required>
                         <label for="password">Contraseña</label>
+                        <input type="password" name="txtPass" id="password" required>
                     </div>
 
                     <div class="">
