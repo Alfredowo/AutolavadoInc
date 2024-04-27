@@ -9,8 +9,8 @@
     <table>
         <thead>
             <tr>
-                <td>Cliente</td>
                 <td>Turno</td>
+                <td>Cliente</td>
                 <td>Empleado</td>
                 <td>Vehiculo</td>
                 <td>Cantidad</td>

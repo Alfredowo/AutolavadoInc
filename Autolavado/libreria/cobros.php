@@ -6,8 +6,8 @@
             $con = new mysqli(s,u,p,bd);
             $con->set_charset("utf8");
             $q = $con->stmt_init();
-            $q->prepare("insert into cobros values(null,?,?,?,?,STR_TO_DATE(?, '%Y-%m-%d %H:%i:%s'),?)");
-            $fechapro = date('Y-m-d H:i:s', strtotime($fecha));
+            $q->prepare("insert into cobros values(null,?,?,?,?,STR_TO_DATE(?, '%Y-%m-%d'),?)");
+            $fechapro = date('Y-m-d', strtotime($fecha));
             $q->bind_param('ssssss', $cliente, $fkempleado, $fkvehiculo, $cantidad, $fechapro, $total);
             $q->execute();
             $q->close();
