@@ -41,6 +41,14 @@ FOREIGN KEY (fkempleado) REFERENCES usuarios(id),
 autosLavados INT NOT NULL,
 total DOUBLE NOT NULL);
 
+CREATE TABLE pagaEstimada(
+id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+fkempleado INT NOT NULL,
+FOREIGN KEY (fkempleado) REFERENCES usuarios(id),
+fecha DATE NOT NULL,
+totalxDia DOUBLE NOT NULL,
+pagaEstimada DOUBLE NOT NULL);
+
 -- vistas ----------------------------------------------------------------------------------------------------------------
 
 /*Vista clientes atendidos*/
@@ -80,6 +88,7 @@ ORDER BY p.fecha;
 
 -- triggers --------------------------------------------------------------------------------------------------------------
 
+-- trigger para saber quien fue el empleado del dia uwu owo ewe iwi
 DROP TRIGGER if EXISTS actualizar_empleadoDelDia;
 DELIMITER //
 CREATE TRIGGER actualizar_empleadoDelDia
@@ -114,6 +123,47 @@ BEGIN
 END;
 //
 
+-- trigger para estimar la paga de cada dia owo uwu ewe
+DROP TRIGGER IF EXISTS actualizar_pagaEstimada;
+DELIMITER //
+CREATE TRIGGER actualizar_pagaEstimada
+AFTER INSERT ON cobros
+FOR EACH ROW
+BEGIN
+    DECLARE fecha_cobro DATE;
+    DECLARE fk_empleado INT;
+    DECLARE total_cobrado DOUBLE;
+    DECLARE paga_estimada DOUBLE;
+    
+    -- Obtiene la fecha del nuevo cobro
+    SET fecha_cobro = NEW.fecha;
+    SET fk_empleado = NEW.fkempleado;
+    
+    -- Calcula el total cobrado en esa fecha y para ese empleado
+    SELECT SUM(total) INTO total_cobrado
+    FROM cobros
+    WHERE fecha = fecha_cobro AND fkempleado = fk_empleado;
+    
+    -- Calcula la paga estimada como el 50% del total cobrado
+    SET paga_estimada = total_cobrado * 0.5;
+    
+    -- Verifica si ya existe un registro para esa fecha y empleado en la tabla pagaEstimada
+    IF EXISTS (SELECT 1 FROM pagaEstimada WHERE fkempleado = fk_empleado AND fecha = fecha_cobro) THEN
+        -- Si ya existe, actualiza el registro
+        UPDATE pagaEstimada
+        SET totalxDia = total_cobrado,
+            pagaEstimada = paga_estimada
+        WHERE fkempleado = fk_empleado AND fecha = fecha_cobro;
+    ELSE
+        -- Si no existe, inserta un nuevo registro
+        INSERT INTO pagaEstimada (fkempleado, fecha, totalxDia, pagaEstimada)
+        VALUES (fk_empleado, fecha_cobro, total_cobrado, paga_estimada);
+    END IF;
+END;
+//
+DELIMITER ;
+
+
 -- pruebas ---------------------------------------------------------------------------------------------------------------
 
 INSERT INTO usuarios VALUES(NULL,'Nya','123','Admin');
@@ -132,6 +182,9 @@ SELECT * FROM usuarios;
 SELECT * FROM vehiculos;
 SELECT * FROM vista_clientes_atendidos;
 SELECT * FROM vista_paga_estimada;
-SELECT * FROM vista_empleado_del_dia;
+SELECT * FROM pagaEstimada;
 SELECT * FROM vista_pagos;
+SELECT * FROM vista_empleado_del_dia;
+
+
 
