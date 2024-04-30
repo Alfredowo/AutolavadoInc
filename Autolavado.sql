@@ -54,24 +54,29 @@ ORDER BY c.id;
 
 /*Vista paga estimada*/
 CREATE VIEW vista_paga_estimada AS
-SELECT u.nombre AS empleado, 
-       c.fecha AS fecha, 
-       SUM(c.total) AS totalxDia,
-       SUM(c.total * 0.5) AS PagaEstimada
-		FROM cobros c
-		INNER JOIN vehiculos v ON c.fkvehiculo = v.id
-		INNER JOIN usuarios u ON c.fkempleado = u.id
-		GROUP BY u.nombre, c.fecha
-		ORDER BY c.fecha;
+SELECT u.nombre AS empleado, c.fecha AS fecha, 
+SUM(c.total) AS totalxDia,
+SUM(c.total * 0.5) AS PagaEstimada
+FROM cobros c
+INNER JOIN vehiculos v ON c.fkvehiculo = v.id
+INNER JOIN usuarios u ON c.fkempleado = u.id
+GROUP BY u.nombre, c.fecha
+ORDER BY c.fecha;
 /* Fin de la Visa*/
 
 /*Vista paga estimada*/
 CREATE VIEW vista_empleado_del_dia AS
 SELECT e.fecha AS fecha, u.nombre AS nombre, e.autosLavados AS autosLavados, e.total AS total
-		FROM empleadodeldia e
-		INNER JOIN usuarios u ON e.fkempleado = u.id
-		ORDER BY e.fecha;
+FROM empleadodeldia e
+INNER JOIN usuarios u ON e.fkempleado = u.id
+ORDER BY e.fecha;
 /* Fin de la Visa*/
+
+CREATE VIEW vista_pagos AS
+SELECT u.nombre AS empelado, p.fecha AS fecha, p.paga AS paga
+FROM pagos p
+INNER JOIN usuarios u ON p.fkempleado = u.id
+ORDER BY p.fecha;
 
 -- triggers --------------------------------------------------------------------------------------------------------------
 
@@ -128,7 +133,5 @@ SELECT * FROM vehiculos;
 SELECT * FROM vista_clientes_atendidos;
 SELECT * FROM vista_paga_estimada;
 SELECT * FROM vista_empleado_del_dia;
-
-
-
+SELECT * FROM vista_pagos;
 
