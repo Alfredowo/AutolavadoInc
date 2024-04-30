@@ -62,14 +62,10 @@ ORDER BY c.id;
 
 /*Vista paga estimada*/
 CREATE VIEW vista_paga_estimada AS
-SELECT u.nombre AS empleado, c.fecha AS fecha, 
-SUM(c.total) AS totalxDia,
-SUM(c.total * 0.5) AS PagaEstimada
-FROM cobros c
-INNER JOIN vehiculos v ON c.fkvehiculo = v.id
-INNER JOIN usuarios u ON c.fkempleado = u.id
-GROUP BY u.nombre, c.fecha
-ORDER BY c.fecha;
+SELECT u.nombre AS empleado, p.fecha AS fecha, p.totalxDia AS totalxDia, p.pagaEstimada AS pagaEstimada
+FROM pagaestimada p
+INNER JOIN usuarios u ON p.fkempleado = u.id
+ORDER BY p.fecha;
 /* Fin de la Visa*/
 
 /*Vista paga estimada*/
@@ -180,10 +176,10 @@ INSERT INTO cobros VALUES(NULL, 'npc', 2, 1, 3, '2024-04-21', 10);
 
 SELECT * FROM usuarios;
 SELECT * FROM vehiculos;
-SELECT * FROM vista_clientes_atendidos;
-SELECT * FROM vista_paga_estimada;
 SELECT * FROM pagaEstimada;
+SELECT * FROM vista_paga_estimada;
 SELECT * FROM vista_pagos;
+SELECT * FROM vista_clientes_atendidos;
 SELECT * FROM vista_empleado_del_dia;
 
 

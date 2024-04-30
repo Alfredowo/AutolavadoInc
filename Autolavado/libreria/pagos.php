@@ -33,10 +33,10 @@
             $q->prepare("select * from vista_paga_estimada where empleado = ?");
             $q->bind_param('s', $empleado);
             $q->execute();
-            $q->bind_result($empleado,$fecha,$total, $paga);
+            $q->bind_result($empleado, $fecha, $totalxDia, $pagaEstimada);
             $q->fetch();
             $q->close();
-            return array($empleado,$fecha,$total, $paga);
+            return array($empleado, $fecha, $totalxDia, $pagaEstimada);
         }
         public static function ObtenerE($empleado)
         {
@@ -62,5 +62,16 @@
             $q->execute();
             $q->close();
         }
+        public static function EliminarPagaEstimada($empleado, $fecha)
+        {
+            $con = new mysqli(s,u,p,bd);
+            $con->set_charset("utf8");
+            $q = $con->prepare("DELETE FROM pagaEstimada WHERE fkempleado = ? AND fecha = ?");
+            $q->bind_param('ss', $empleado, $fecha);
+            $q->execute();
+            $q->close();
+        }
+
+
     }
 ?>
