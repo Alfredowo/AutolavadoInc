@@ -1,17 +1,12 @@
 <h1>Reporte de Clientes Atendidos</h1>
 
 <div>
-    <form action="imprimir" method="get">
-        <input type="submit" value="Imprimir">
-    </form>
-
-    <!-- Tabla que mostrara los clientes que fueron atendidos -->
-    <table>
+    <table id="tabla_clientes">
         <thead>
             <tr>
                 <td>Turno</td>
                 <td>Cliente</td>
-                <td>Empleado</td>
+                <td>Atendio</td>
                 <td>Vehiculo</td>
                 <td>Cantidad</td>
                 <td>Fecha</td>
@@ -34,3 +29,39 @@
         </tbody>
     </table>
 </div>
+<div>
+    <a href="javascript:genPDF()">Generar</a>
+    <!-- <input type="text" id="h1"> -->
+</div>
+<script type="text/javascript" src="jspdf.min.js"></script>
+<script type="text/javascript">
+    function genPDF() {
+            var doc = new jsPDF();
+            var tabla = document.getElementById('tabla_clientes');
+            var rows = tabla.getElementsByTagName('tr');
+            
+            // Iniciar posición de Y
+            var y = 20;
+            
+            // Dibujar encabezado de tabla
+            doc.text('Clientes Atendidos', 10, y);
+            y += 10; // Incrementar posición Y para separar el título de la tabla
+            
+            var colCount = tabla.rows[0].cells.length;
+            for (var i = 0; i < rows.length; i++) {
+                var rowData = [];
+                for (var j = 0; j < colCount; j++) {
+                    var cellData = rows[i].cells[j].innerText;
+                    rowData.push(cellData);
+                }
+                
+                // Dibujar fila de la tabla
+                for (var k = 0; k < rowData.length; k++) {
+                    doc.text(8 + k * 30, y, rowData[k]);
+                }
+                y += 10; // Incrementar posición Y para la siguiente fila
+            }
+            
+            doc.save('tabla_clientes.pdf');
+    }
+</script>

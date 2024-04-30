@@ -12,17 +12,20 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>Jusepe</td>
-                <td>20/04/2024</td>
-                <td>30</td>
-                <td>15</td>
-                <td>
-                    <form action="" method="post">
-                        <button>Pagar</button>
-                    </form>
-                </td>
-            </tr>
+            <?php foreach ($res as $empleado) {?>
+                <tr>
+                    <td><?php echo $empleado['empleado']?></td>
+                    <td><?php echo $empleado['fecha']?></td>
+                    <td><?php echo $empleado['totalxDia']?></td>
+                    <td><?php echo $empleado['PagaEstimada']?></td>
+                    <td>
+                        <form action="pagarempleados" method="post">
+                            <button>Pagar</button>
+                            <input type="hidden" name="empleado" value="<?php echo $empleado['empleado']?>">
+                        </form>
+                    </td>
+                </tr>
+            <?php }?>
         </tbody>
     </table>
 </div>

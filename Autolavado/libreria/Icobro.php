@@ -1,6 +1,7 @@
 <?php
     interface Icobro
     {
-        function CalcularCobro($cantidad);
+        function CalcularCobro($cantidad, $costo);
+        // function CalcularCobro($cantidad);
     }
 ?>

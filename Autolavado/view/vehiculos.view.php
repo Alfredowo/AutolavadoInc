@@ -1,6 +1,6 @@
-<h1>Vehiculos</h1>
-<div>
-    <table>
+<div id="mitabla">
+    <h1>Vehiculos</h1>
+    <table id="tabla-vehiculos">
         <thead>
             <tr>
                 <td>Nombre</td>
@@ -20,3 +20,5 @@
         </tbody>
     </table>
 </div>
+
+

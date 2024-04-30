@@ -6,9 +6,9 @@
 ?>
 <div>Bienvenido</div>
 <?php
-    echo $auto->CalcularCobro(1);
+    echo $auto->CalcularCobro(1,15);
     echo ' ';
-    echo $camioneta->CalcularCobro(2);
+    echo $camioneta->CalcularCobro(2,15);
     echo ' ';
-    echo $tracto->CalcularCobro(3);
+    echo $tracto->CalcularCobro(3,15);
 ?>
