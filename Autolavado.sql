@@ -73,7 +73,7 @@ ORDER BY e.fecha;
 /* Fin de la Visa*/
 
 CREATE VIEW vista_pagos AS
-SELECT u.nombre AS empelado, p.fecha AS fecha, p.paga AS paga
+SELECT u.nombre AS empleado, p.fecha AS fecha, p.paga AS paga
 FROM pagos p
 INNER JOIN usuarios u ON p.fkempleado = u.id
 ORDER BY p.fecha;

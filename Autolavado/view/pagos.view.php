@@ -10,12 +10,13 @@
         </thead>
 
         <tbody>
-           <tr>
-            <td>Hola</td>
-            <td>No</td>
-            <td>Se</td>
-            <td>Que pex</td>
-           </tr>
+            <?php foreach ($resultado as $res) {?>
+                <tr>
+                    <td><?php echo $res['empleado'] ?></td>
+                    <td><?php echo $res['fecha'] ?></td>
+                    <td><?php echo $res['paga'] ?></td>
+                </tr>
+            <?php }?>
         </tbody>
     </table>
 </div>
