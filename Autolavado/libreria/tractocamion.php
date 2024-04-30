@@ -1,9 +1,9 @@
 <?php
     class Tractocamion implements Icobro
     {
-        function CalcularCobro($cantidad)
+        function CalcularCobro($cantidad, $costo)
         {
-            return $cantidad * 8;
+            return $cantidad * $costo;
         }
     }
 ?>

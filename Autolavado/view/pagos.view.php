@@ -1,24 +1,57 @@
 <h1>Reporte de Pagos Diarios</h1>
 <div>
-    <form action="imprimir" method="get">
-        <input type="submit" value="Imprimir">
-    </form>
-
-    <table>
+    <table id="tabla-Pagos">
         <thead>
             <tr>
                 <td>Empleado</td>
-                <td>Día</td>
-                <td>Pago</td>
+                <td>Fecha</td>
+                <td>Paga</td>
             </tr>
         </thead>
 
         <tbody>
-            <tr>
-                <td>Jusepe</td>
-                <td>12</td>
-                <td>$150</td>
-            </tr>
+           <tr>
+            <td>Hola</td>
+            <td>No</td>
+            <td>Se</td>
+            <td>Que pex</td>
+           </tr>
         </tbody>
     </table>
 </div>
+<div>
+    <a href="javascript:genPDF()">Generar</a>
+    <!-- <input type="text" id="h1"> -->
+</div>
+<script type="text/javascript" src="jspdf.min.js"></script>
+<script type="text/javascript">
+        function genPDF() {
+            var doc = new jsPDF();
+            var tabla = document.getElementById('tabla-Pagos');
+            var rows = tabla.getElementsByTagName('tr');
+            
+            // Iniciar posición de Y
+            var y = 20;
+            
+            // Dibujar encabezado de tabla
+            doc.text('Pagos Diarios', 10, y);
+            y += 10; // Incrementar posición Y para separar el título de la tabla
+            
+            var colCount = tabla.rows[0].cells.length;
+            for (var i = 0; i < rows.length; i++) {
+                var rowData = [];
+                for (var j = 0; j < colCount; j++) {
+                    var cellData = rows[i].cells[j].innerText;
+                    rowData.push(cellData);
+                }
+                
+                // Dibujar fila de la tabla
+                for (var k = 0; k < rowData.length; k++) {
+                    doc.text(10 + k * 50, y, rowData[k]);
+                }
+                y += 10; // Incrementar posición Y para la siguiente fila
+            }
+            
+            doc.save('tabla_pagos.pdf');
+        }
+</script>

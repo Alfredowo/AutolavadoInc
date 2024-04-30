@@ -1,10 +1,6 @@
-<h1>Vehiculos</h1>
-<div>
-    <form action="addvehiculos" method="get">
-        <input type="submit" value="Nuevo">
-    </form>
-
-    <table>
+<div id="mitabla">
+    <h1>Vehiculos</h1>
+    <table id="tabla-vehiculos">
         <thead>
             <tr>
                 <td>Nombre</td>
@@ -24,3 +20,5 @@
         </tbody>
     </table>
 </div>
+
+
