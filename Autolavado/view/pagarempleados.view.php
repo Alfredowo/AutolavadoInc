@@ -1,4 +1,7 @@
 <h1>Pagar a Empleados</h1>
+<div class="col-6">
+    <?php echo $result; ?>
+</div>                    
 <div>
     <table>
         <thead>
