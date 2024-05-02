@@ -1,5 +1,5 @@
 <main>
-    <h1>Registro Clientes Antendidos</h1>
+    <h1 class="titulochido">Registro Clientes Antendidos</h1>
     <form action="">
         <fieldset>
             <label for="empleado">Empleado</label>

@@ -1,22 +1,16 @@
-<h1>Reporte de Clientes Atendidos</h1>
-
-<div>
-    <!-- Boton para agregar un nuevo  -->
-    <form action="imprimir" method="GET">
-        <input type="submit" value="Imprimir">
-    </form>
-
+<h1 class="titulochido">Reporte de Clientes Atendidos</h1>
+<div class="table-container">
     <!-- Tabla que mostrara los clientes que fueron atendidos -->
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <td>Cliente</td>
-                <td>Turno</td>
-                <td>Empleado</td>
-                <td>Vehiculo</td>
-                <td>Cantidad</td>
-                <td>Fecha</td>
-                <td>Total</td>
+                <td class="tabletitulos">Cliente</td>
+                <td class="tabletitulos">Turno</td>
+                <td class="tabletitulos">Empleado</td>
+                <td class="tabletitulos">Vehiculo</td>
+                <td class="tabletitulos">Cantidad</td>
+                <td class="tabletitulos">Fecha</td>
+                <td class="tabletitulos">Total</td>
             </tr>
         </thead>
 

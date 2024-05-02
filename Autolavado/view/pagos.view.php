@@ -1,15 +1,11 @@
-<h1>Reporte de Pagos Diarios</h1>
-<div>
-    <form action="imprimir" method="get">
-        <input type="submit" value="Imprimir">
-    </form>
-
-    <table>
+<h1 class="titulochido">Reporte de Pagos Diarios</h1>
+<div class="table-container">
+    <table class="table">
         <thead>
             <tr>
-                <td>Empleado</td>
-                <td>Día</td>
-                <td>Pago</td>
+                <td class="tabletitulos">Empleado</td>
+                <td class="tabletitulos">Día</td>
+                <td class="tabletitulos">Pago</td>
             </tr>
         </thead>
 

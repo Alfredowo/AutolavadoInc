@@ -1,17 +1,12 @@
-<h1>Reporte de Empleado del Día</h1>
-
-<div>
-    <form action="imprimir" method="get">
-        <input type="submit" value="Imprimir">
-    </form>
-
-    <table>
+<h1 class="titulochido">Reporte de Empleado del Día</h1>
+<div class="table-container">
+    <table class="table">
         <thead>
             <tr>
-                <td>Empleado</td>
-                <td>Fecha</td>
-                <td>Autos Lavados</td>
-                <td>Dinero Generado</td>
+                <td class="tabletitulos">Empleado</td>
+                <td class="tabletitulos">Fecha</td>
+                <td class="tabletitulos">Autos Lavados</td>
+                <td class="tabletitulos">Dinero Generado</td>
             </tr>
         </thead>
 

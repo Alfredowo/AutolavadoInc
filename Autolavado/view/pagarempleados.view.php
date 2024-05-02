@@ -1,13 +1,13 @@
-<h1>Pagar a Empleados</h1>
-<div>
-    <table>
+<h1 class="titulochido">Pagar a Empleados</h1>
+<div class="table-container">
+    <table class="table">
         <thead>
             <tr>
-                <td>Empleado</td>
-                <td>Fecha</td>
-                <td>Total X Día</td>
-                <td>Paga Estimada</td>
-                <td>Acciones</td>
+                <td class="tabletitulos">Empleado</td>
+                <td class="tabletitulos">Fecha</td>
+                <td class="tabletitulos">Total X Día</td>
+                <td class="tabletitulos">Paga Estimada</td>
+                <td class="tabletitulos">Acciones</td>
             </tr>
         </thead>
 
@@ -19,7 +19,7 @@
                 <td>15</td>
                 <td>
                     <form action="" method="post">
-                        <button>Pagar</button>
+                        <button class="butonpago">Pagar</button>
                     </form>
                 </td>
             </tr>

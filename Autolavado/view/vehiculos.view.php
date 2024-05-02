@@ -1,15 +1,11 @@
-<h1>Vehiculos</h1>
-<div>
-    <form action="addvehiculos" method="get">
-        <input type="submit" value="Nuevo">
-    </form>
-
-    <table>
+<h1 class="titulochido">Vehiculos</h1>
+<div class="table-container">
+    <table class="table">
         <thead>
             <tr>
-                <td>Nombre</td>
-                <td>Tipo de cobro</td>
-                <td>Precio</td>
+                <td class="tabletitulos">Nombre</td>
+                <td class="tabletitulos">Tipo de cobro</td>
+                <td class="tabletitulos">Precio</td>
             </tr>
         </thead>
 
