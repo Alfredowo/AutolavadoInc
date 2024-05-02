@@ -1,9 +1,9 @@
 <?php
     class Camioneta implements Icobro
     {
-        function CalcularCobro($cantidad)
+        function CalcularCobro($cantidad, $costo)
         {
-            return $cantidad * 7;
+            return $cantidad * $costo;
         }
     }
 ?>

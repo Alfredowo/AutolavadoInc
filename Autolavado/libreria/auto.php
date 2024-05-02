@@ -1,9 +1,9 @@
 <?php
     class Auto implements Icobro
     {
-        function CalcularCobro($cantidad)
+        function CalcularCobro($cantidad, $costo)
         {
-            return $cantidad * 5;
+            return $cantidad * $costo;
         }
     }
 ?>
