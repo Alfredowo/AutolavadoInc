@@ -1,5 +1,4 @@
-<?php echo $res['usuario']?>
-<?php echo $res['ide']?>
+<label for="empleado">Empleado: </label> <?php echo $res['usuario']?>
 <?php
 
     $ve = Factory::Elegirvehiculo('Auto');
@@ -10,9 +9,8 @@
     <input type="hidden" id="empleado_id" name="empleado" value="<?php echo $res['ide']?>">
     <form action="cobros" method="post">
         <fieldset>
-            <label for="empleado">Empleado</label>
 
-            <input type="text" id="empleado" name="empleado" placeholder="<?php echo $res['usuario']?>" readonly>
+            <input type="hidden" id="empleado" name="empleado" placeholder="<?php echo $res['usuario']?>" readonly>
             <input type="hidden" id="empleado_id" name="empleado" value="<?php echo $res['ide']?>">
 
             <label for="cliente">Cliente</label>
