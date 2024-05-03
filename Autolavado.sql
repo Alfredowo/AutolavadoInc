@@ -5,7 +5,7 @@ USE autolavado;
 /*Tablas de la BD*/
 CREATE TABLE vehiculos(
 id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-nombre VARCHAR(50) NOT NULL,
+nombre VARCHAR(50) NOT NULL UNIQUE,
 tipocobro VARCHAR(50) NOT NULL,
 costo DOUBLE NOT NULL);
 
