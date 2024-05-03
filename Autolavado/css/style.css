@@ -1,0 +1,263 @@
+/* GLOBALES */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: #A0CACA;
+    font-family: 'Kreon', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+p {
+    color: black;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: 'Kreon', sans-serif;
+    margin: calc(5rem / 2) 0;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+.header {
+    background-color: #528685;
+    padding: 1rem 0 1rem 0;
+}
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem;
+}
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+        text-align: left;
+        color: #FFFFFF;
+        font-weight: 700;
+        line-height: 2;
+        max-width: 60rem;
+    }
+}
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+/* Login */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center_fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fondo {
+    width: 400px;
+    height: 500px;
+    background: #DCECE5;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fondo .contenedor-form {
+    width: 100%;
+    padding: 30px;
+}
+.contenedor-form h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+
+}
+.contenedor-input {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+.contenedor-input label {
+    font-size: 2.5rem;
+    font-weight: 400;
+    pointer-events: none;
+}
+.contenedor-input input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: .8rem;
+    border-radius: 1.5rem;
+    margin: 1.5rem auto;
+}
+.btn-login {
+    background: #778DA8;
+    width: auto;
+    height: 45px;
+    border: none;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 20px 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+/* Fin del login */
+/* Inicio de la navbar del admin*/
+.exit
+{
+    float: right;
+}
+.options
+{
+    background-color: #609FA5;
+}
+.buttonss {
+    background-color: #3F7F86;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+.buttonss:hover {
+    background-color: #2C6268;
+}
+/*fin navbar*/
+/*Titulos facheros*/
+.titulochido {
+    background-color: #2E676D;
+    color: wheat;
+    margin-top: 0;
+    font-family: 'Kreon', sans-serif;
+    font-weight: 150;
+    text-align: left;
+    clear: left; /* Esto evita que otros elementos se coloquen a su lado */
+}
+/*fin*/
+/*Tablas*/
+.butonpago
+{
+   background-color: #39B154;
+   color: wheat;
+   font-weight: bold;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.butonimprimir
+{
+   background-color: #b13939;
+   color: wheat;
+   font-weight: bold;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   float: right;
+   cursor: pointer;
+}
+.tabletitulos
+{
+    background: #39A5B1;
+    color: wheat;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container {
+    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+    width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
+  }
+/* Estilos de las celdas de encabezado */
+.table th {
+    background-color: #3F7F86;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos de las celdas de datos */
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /* Línea de separación entre filas */
+}
+/* Estilos alternados para filas */
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Estilos para el hover sobre las filas */
+.table tr:hover {
+    background-color: #9bafbe;
+}
+/*fin*/
+/*Registro*/
+.registro {
+    background: #DCECE5;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    margin-top: 5rem;
+    margin-right: 500px;
+    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/**/

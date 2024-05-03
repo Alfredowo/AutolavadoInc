@@ -1,26 +1,26 @@
-<h1>Vehiculos</h1>
-<div>
-    <form action="addvehiculos" method="get">
-        <input type="submit" value="Nuevo">
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <td>Nombre</td>
-                <td>Tipo de cobro</td>
-                <td>Precio</td>
-            </tr>
-        </thead>
-
-        <tbody>
-            <?php foreach ($resultado as $res) {?>
+<div id="mitabla">
+    <h1 class="titulochido">Vehiculos</h1>
+    <div class="table-container">
+        <table class="table"id="tabla-vehiculos">
+            <thead>
                 <tr>
-                    <td><?php echo $res['nombre'] ?></td>
-                    <td><?php echo $res['tipocobro'] ?></td>
-                    <td><?php echo $res['costo'] ?></td>
+                    <td class="tabletitulos">Nombre</td>
+                    <td class="tabletitulos">Tipo de cobro</td>
+                    <td class="tabletitulos">Precio</td>
                 </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+            </thead>
+
+            <tbody>
+                <?php foreach ($resultado as $res) {?>
+                    <tr>
+                        <td><?php echo $res['nombre'] ?></td>
+                        <td><?php echo $res['tipocobro'] ?></td>
+                        <td><?php echo $res['costo'] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </div>
+
+
