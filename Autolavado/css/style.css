@@ -199,6 +199,21 @@ h4 {
    border-radius: 5px;
    cursor: pointer;
 }
+.cobros { 
+    background-color: #8aa7aa; 
+    color: white; 
+    font-size: 14px; 
+    font-weight: bold; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 10px; 
+    transition: background-color 0.3s ease; 
+}
+.lbl{
+    font-size: 18px;
+    font-style: oblique;
+}
 .butonimprimir
 {
    background-color: #b13939;

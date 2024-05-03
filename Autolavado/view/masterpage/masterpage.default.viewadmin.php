@@ -17,7 +17,7 @@
     <nav class="">
       <a class="buttonss" href="vehiculos">Vehiculos</a>
       <a class="buttonss" href="pagarempleados">Pagar a empleados</a>
-      <a class="buttonss" href="empleados">Registrar Empleados</a>
+      <a class="buttonss" href="empleados">Empleados</a>
         <select class="buttonss" onchange="window.location.href=this.value">
           <option class="options" value="#" selected>Registros</option>
           <option class="options" value="empleadodia">Empleado del día</option>

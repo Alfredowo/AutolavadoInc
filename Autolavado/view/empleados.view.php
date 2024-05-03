@@ -1,7 +1,7 @@
 <h1 class="titulochido">Empleados</h1>
 <div class="table-container">
     <form action="addempleado" method="GET">
-        <input class="buttonss" type="submit" value="Nuevo">
+        <input class="buttonss" type="submit" value="Registrar Nuevo">
     </form>
     <br>
     <table class="table">
