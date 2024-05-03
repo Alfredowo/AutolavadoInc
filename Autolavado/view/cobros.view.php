@@ -1,4 +1,4 @@
-<label for="empleado">Empleado: </label> <?php echo $res['usuario']?>
+<label class="lbl" for="empleado">Empleado: </label> <?php echo $res['usuario']?>
 <?php
 
     $ve = Factory::Elegirvehiculo('Auto');
@@ -7,7 +7,7 @@
     <h1 class="titulochido">Registro Clientes Antendidos</h1>
     <input type="hidden" id="empleado" name="empleado" placeholder="<?php echo $res['usuario']?>" readonly>
     <input type="hidden" id="empleado_id" name="empleado" value="<?php echo $res['ide']?>">
-    <form action="cobros" method="post">
+    <form class="form"action="cobros" method="post">
         <fieldset>
 
             <input type="hidden" id="empleado" name="empleado" placeholder="<?php echo $res['usuario']?>" readonly>
@@ -36,7 +36,7 @@
             <!-- <label for="total">Total</label>
             <input type="number" placeholder="Total" id="total" min="1" step="0.1" name="total"> -->
         </fieldset>
-        <button type="submit">Aceptar</button>
+        <button class="buttonss" type="submit">Aceptar</button>
     </form>
 </main>
 <!-- Script para enviar la selección -->
