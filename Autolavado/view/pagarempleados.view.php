@@ -1,4 +1,4 @@
-<h1 class="titulochido">Pagar a Empleados</h1>
+<h1 class="">Pagar a Empleados</h1>
 <div class="table-container">
     <div class="col-6">
         <?php echo $result; ?>
