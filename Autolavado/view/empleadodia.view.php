@@ -1,4 +1,4 @@
-<h1 class="titulochido">Reporte de Empleado del Día</h1>
+<h1 class="">Reporte de Empleado del Día</h1>
 <div class="table-container">
     <table class="table"id="tabla_empleadodia">
     <a class="butonimprimir" href="javascript:genPDF()">Generar</a>
