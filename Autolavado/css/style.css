@@ -8,7 +8,7 @@ html {
 }
 body {
     background-color: #A0CACA;
-    font-family: 'Kreon', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.8;
 }
@@ -33,7 +33,7 @@ picture {
 }
 
 h1, h2, h3 {
-    font-family: 'Kreon', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: calc(5rem / 2) 0;
     font-weight: 300;
     text-align: center;
@@ -164,8 +164,7 @@ h4 {
 .buttonss {
     background-color: #3F7F86;
     color: white;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 1.6rem;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -179,10 +178,9 @@ h4 {
 /*fin navbar*/
 /*Titulos facheros*/
 .titulochido {
-    background-color: #2E676D;
-    color: wheat;
+    color: black;
     margin-top: 0;
-    font-family: 'Kreon', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 150;
     text-align: left;
     clear: left; /* Esto evita que otros elementos se coloquen a su lado */
@@ -228,7 +226,9 @@ h4 {
 .tabletitulos
 {
     background: #39A5B1;
-    color: wheat;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
 }
 .table {
     width: 100%;
@@ -276,3 +276,54 @@ h4 {
     text-align: center;
 }
 /**/
+
+
+/*Estilo de la barra de navegacion*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    background: #528685;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 7.5px 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #2C6268;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+.cerrar {
+    margin-left: 500px; /* Ajusta el margen según sea necesario */
+}

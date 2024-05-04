@@ -1,4 +1,4 @@
-<h1 class="titulochido">Reporte de Pagos Diarios</h1>
+<h1 class="">Reporte de Pagos Diarios</h1>
 <div class="table-container">
 <a class="butonimprimir"href="javascript:genPDF()">Generar</a>
     <!-- <input type="text" id="h1"> -->
