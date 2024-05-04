@@ -57,8 +57,22 @@ class login
         return $rs;
     }
     public static function Mensaje($total)
-    {
-        echo "<script>alert('El total es: $total');</script>";
+    {?>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><input type="hidden">
+	    <script>Swal.fire({
+            title: 'El costo total es',
+            text: '$<?php echo $total ?>',
+            icon: 'info',
+            width: '30%',
+            padding: '1rem'
+        });</script>
+     <?php
+    }
+    public static function MensajeError()
+    {?>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><input type="hidden">
+		<script src="dist/js/sweetAlert.js"></script>
+     <?php
     }
 }
 
