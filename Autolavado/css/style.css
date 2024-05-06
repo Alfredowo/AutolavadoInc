@@ -188,6 +188,57 @@ h4 {
     clear: left; /* Esto evita que otros elementos se coloquen a su lado */
 }
 /*fin*/
+/* Estilo para el contenedor del select */
+.menu {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.select-container {
+    margin-right: auto; /* Empuja el select hacia la izquierda */
+}
+  /* Estilo para el select */
+  .select-custom {
+    appearance: none;
+  }
+  
+  /* Estilo para la flecha desplegable */
+  .select-custom::after {
+    content: '\25BC'; /* Código Unicode para la flecha hacia abajo */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Para evitar clics en la flecha */
+  }
+  
+  /* Estilo para las opciones del select */
+  .select-custom option {
+    width: 300px; /* Ajusta el ancho de las opciones según sea necesario */
+    height: 100px;
+    font-size: 16px;
+    color: #87c1c6;
+    background-color: #92a8ab;
+  }
+  
+  /* Estilo para cuando el select está enfocado */
+  .select-custom:focus {
+    outline: none;
+    border-color: #586c6e;
+    box-shadow: 0 0 5px #69a3aab5;
+  }
+  
+  /* Estilo para las opciones cuando el select está enfocado */
+  .select-custom:focus option {
+    background-color: #558082;
+  }
+  
+  /* Estilo para cuando el select está deshabilitado */
+  .select-custom:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
 /*Tablas*/
 .butonpago
 {
