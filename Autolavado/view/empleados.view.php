@@ -8,7 +8,7 @@
         <thead>
             <tr>
                 <td class="tabletitulos">Nombre</td>
-                <td class="tabletitulos">Usuario</td>
+                <td class="tabletitulos">Permisos</td>
                 <td class="tabletitulos">Contraseña</td>
             </tr>
         </thead>
@@ -16,8 +16,8 @@
             <?php foreach ($resultado as $res) {?>
                 <tr>
                     <td><?php echo $res['nombre'] ?></td>
-                    <td><?php echo $res['pass'] ?></td>
                     <td><?php echo $res['permisos'] ?></td>
+                    <td><?php echo $res['pass'] ?></td>
                 </tr>
             <?php } ?>
         </tbody>

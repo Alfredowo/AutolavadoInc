@@ -16,7 +16,7 @@
 	{
 		$dc = login::Verificar($_POST['username']);
 		$v = login::Vehiculo('%');
-		if (isset($_POST['username']) == $dc[0] && isset($_POST['password']) == $dc[2]) {
+		if ($_POST['username'] == $dc[1] && $_POST['password'] == $dc[2]) {
 			if ($dc[3] == 'Empleado') {
 				$p['res'] = array(
 					'usuario' => $dc[1],
@@ -31,8 +31,8 @@
 		}
 		else 
 		{
+			$er = login::MensajeError();
 			$p = array();
-			echo "<script>alert('Usuario o contraseña incorrectos');</script>";
 			ViewLogin('login',$p);
 		}
 	}
