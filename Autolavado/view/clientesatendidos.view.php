@@ -8,8 +8,8 @@
     <table class="table" id="tabla_clientes">
         <thead>
             <tr>
-                <td class="tabletitulos">Cliente</td>
                 <td class="tabletitulos">Turno</td>
+                <td class="tabletitulos">Cliente</td>
                 <td class="tabletitulos">Empleado</td>
                 <td class="tabletitulos">Vehiculo</td>
                 <td class="tabletitulos">Cantidad</td>

@@ -11,7 +11,7 @@ costo DOUBLE NOT NULL);
 
 CREATE TABLE usuarios(
 id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-nombre VARCHAR(50) NOT NULL,
+nombre VARCHAR(50) NOT NULL UNIQUE,
 pass VARCHAR(50) NOT NULL,
 permisos ENUM('Admin','Empleado') NOT NULL);
 
@@ -162,11 +162,13 @@ DELIMITER ;
 
 -- pruebas ---------------------------------------------------------------------------------------------------------------
 
-INSERT INTO usuarios VALUES(NULL,'Nya','123','Admin');
-INSERT INTO usuarios VALUES(NULL,'Lupe','123','Admin');
+INSERT INTO usuarios VALUES(NULL,'Nya','123','Empleado');
 INSERT INTO usuarios VALUES(NULL,'Fer','123','Empleado');
-INSERT INTO usuarios VALUES(NULL,'Alfre','123','Empleado');
-INSERT INTO vehiculos VALUES(NULL, 'Triciclo', 'Llantas', 5.0);
+INSERT INTO usuarios VALUES(NULL,'Alfre','123','Admin');
+INSERT INTO usuarios VALUES(NULL,'Lupe','123','Admin');
+INSERT INTO vehiculos VALUES(NULL, 'Auto', 'Pieza', 5.0);
+INSERT INTO vehiculos VALUES(NULL, 'Camioneta', 'Llantas', 6.0);
+INSERT INTO vehiculos VALUES(NULL, 'Tracto camion', 'Metros', 7.0);
 INSERT INTO cobros VALUES(NULL, 'npc', 1, 1, 3, '2024-04-20', 10); 
 INSERT INTO cobros VALUES(NULL, 'npc', 2, 1, 3, '2024-04-20', 20); 
 INSERT INTO cobros VALUES(NULL, 'npc', 1, 1, 3, '2024-04-20', 10); 
@@ -181,6 +183,3 @@ SELECT * FROM vista_paga_estimada;
 SELECT * FROM vista_pagos;
 SELECT * FROM vista_clientes_atendidos;
 SELECT * FROM vista_empleado_del_dia;
-
-
-
