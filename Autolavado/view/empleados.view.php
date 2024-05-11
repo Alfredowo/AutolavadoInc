@@ -1,4 +1,4 @@
-<h1 class="titulochido">Empleados</h1>
+<h1 class="">Empleados</h1>
 <div class="table-container">
     <form action="addempleado" method="GET">
         <input class="buttonss" type="submit" value="Registrar Nuevo">
@@ -8,8 +8,8 @@
         <thead>
             <tr>
                 <td class="tabletitulos">Nombre</td>
-                <td class="tabletitulos">Usuario</td>
                 <td class="tabletitulos">Contraseña</td>
+                <td class="tabletitulos">Usuario</td>
             </tr>
         </thead>
         <tbody>

@@ -1,37 +1,37 @@
-<label class="lbl" for="empleado">Empleado: </label> <?php echo $res['usuario']?>
+<label class="empleado" for="empleado">Empleado: </label> <?php echo $res['usuario']?>
 <?php
 
     $ve = Factory::Elegirvehiculo('Auto');
 ?>
 <main>
-    <h1 class="titulochido">Registro Clientes Antendidos</h1>
+    <h1 class="titulochido2">Registro Clientes Antendidos</h1>
     <input type="hidden" id="empleado" name="empleado" placeholder="<?php echo $res['usuario']?>" readonly>
     <input type="hidden" id="empleado_id" name="empleado" value="<?php echo $res['ide']?>">
-    <form class="form"action="cobros" method="post">
+    <form class="formemple" action="cobros" method="post">
         <fieldset>
 
             <input type="hidden" id="empleado" name="empleado" placeholder="<?php echo $res['usuario']?>" readonly>
             <input type="hidden" id="empleado_id" name="empleado" value="<?php echo $res['ide']?>">
 
-            <label for="cliente">Cliente</label>
-            <input type="text" placeholder="Nombre Cliente" id="cliente" name="cliente">
+            <label class="texte" for="cliente">Cliente</label><br>
+            <input class="inpute" type="text" placeholder="Nombre Cliente" id="cliente" name="cliente"><br>
             
-            <label for="vehiculos">Tipo de Vehiculo</label>
-            <select id="vehiculos" name="vehiculos">
-                <option value="" disabled selected>-- Selecciona el vehiculo --</option>
+            <label class="texte" for="vehiculos">Tipo de Vehiculo</label><br>
+            <select class="inpute" id="vehiculos" name="vehiculos"><br>
+                <option value="" disabled selected>-- Selecciona el vehiculo --</option><br>
                 <?php
                     $resultados = $res['vehiculo'];
                     foreach ($resultados as $vehiculo) {?>
                         <option value="<?php echo $vehiculo['id']?>"><?php echo $vehiculo['nombre']?></option>
                     
                 <?php }?>
-            </select>
+            </select><br>
 
-            <label for="cantidad">Cantidad</label>
-            <input type="number" placeholder="Cantidad" id="cantidad" min="0" name="cantidad">
+            <label class="texte" for="cantidad">Cantidad</label><br>
+            <input class="inpute" type="number" placeholder="Cantidad" id="cantidad" min="0" name="cantidad"><br>
 
-            <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" name="fecha">
+            <label class="texte" for="fecha">Fecha</label><br>
+            <input class="inpute" type="date" id="fecha" name="fecha"><br>
 
             <!-- <label for="total">Total</label>
             <input type="number" placeholder="Total" id="total" min="1" step="0.1" name="total"> -->

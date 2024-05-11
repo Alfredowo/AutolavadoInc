@@ -1,5 +1,5 @@
 <div id="mitabla">
-    <h1 class="titulochido">Vehiculos</h1>
+    <h1 class="">Vehiculos</h1>
     <div class="table-container">
         <table class="table"id="tabla-vehiculos">
             <thead>

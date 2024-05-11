@@ -12,15 +12,9 @@
   <script src="jquery/jquery.min.js"></script> 
 </head> 
 <body> 
-  <header class="header"> 
-  <div class="contenedor contenido-header"> 
-    <nav class=""> 
-      <a class="buttonss" href="cobros">Cobros</a> 
-      <a class="exit buttonss" href="home">Cerrar Sesion</a> 
-    </nav> 
-    </div> 
-    </header> 
-  </div> 
-  <div class="cobros"><?php echo $view_content; ?></div> 
+  <ul class="header">
+    <li><a  class="buttonss cerrar" href="home">Cerrar Sesion</a></li>
+  </ul>
+  <div><?php echo $view_content; ?></div> 
 </body> 
 </html>
