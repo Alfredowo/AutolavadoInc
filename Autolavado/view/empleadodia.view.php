@@ -6,8 +6,8 @@
     <br><br>
         <thead>
             <tr>
-                <td class="tabletitulos">Fecha</td>
                 <td class="tabletitulos">Empleado</td>
+                <td class="tabletitulos">Fecha</td>
                 <td class="tabletitulos">Autos Lavados</td>
                 <td class="tabletitulos">Dinero Generado</td>
             </tr>

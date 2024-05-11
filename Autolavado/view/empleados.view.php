@@ -10,7 +10,6 @@
                 <td class="tabletitulos">Nombre</td>
                 <td class="tabletitulos">Permisos</td>
                 <td class="tabletitulos">Contraseña</td>
-                <td class="tabletitulos">Usuario</td>
             </tr>
         </thead>
         <tbody>
