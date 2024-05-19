@@ -28,7 +28,7 @@
             </select><br>
 
             <label class="texte" for="cantidad">Cantidad</label><br>
-            <input class="inpute" type="number" placeholder="Cantidad" id="cantidad" min="0" name="cantidad"><br>
+            <input class="inpute" type="number" placeholder="Cantidad" id="cantidad" min="1" name="cantidad" step="0.1"><br>
 
             <label class="texte" for="fecha">Fecha</label><br>
             <input class="inpute" type="date" id="fecha" name="fecha"><br>

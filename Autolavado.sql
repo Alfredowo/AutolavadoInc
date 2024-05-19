@@ -106,7 +106,7 @@ BEGIN
 	   SELECT fkempleado, COUNT(*), SUM(total)
 	   INTO nuevoEmpleado, nuevoRepeticiones, nuevoTotal
 	   FROM cobros WHERE fecha = NEW.fecha
-	   GROUP BY fkempleado
+	   GROUP BY fkempleado, fecha
 	   ORDER BY COUNT(*) DESC, SUM(total) DESC, fecha
 	   LIMIT 1;
 	
